@@ -1,0 +1,262 @@
+* {box-sizing: border-box; }
+
+body {font-family:Verdana, Arial, sans-serif;
+	 background-color:  #FFCD22 ;
+	 background-image: linear-gradient(to bottom, #FFFFFF, #FF0000 );
+	 background-repeat: no-repeat;  
+}
+
+#boxer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: stretch;	
+	/* align-items: baseline; */
+	margin-top: 5px;
+}
+
+#wrapper { 
+	/* This has no flex */
+	display: flex;
+	background-color: #f90; 
+	box-shadow: 5px 5px 5px #D48309;
+	color: #401801;
+	width: 90%;
+	margin: auto;
+	min-width:1100px;
+} 
+
+/* Sets the navigator as the left column. */
+nav { 
+	float: left;
+	width: 150px;
+
+} 
+
+nav a { 
+	text-decoration: none;
+	display: block;	
+	padding: 20px;
+	background-color: #f90; 
+	/* #B3C7E6; * not a bad color at all.*/
+	border-bottom: 1px solid #FFFFFF; 
+	font-weight: bold;
+	transition: background-color 2s linear;  /* newest  */
+}
+
+nav a:link    { color: #401801;}
+nav a:visited { color: #401801; }
+nav a:hover   { 
+		color: #F90;
+		background-color: #EAEAEA; 
+}
+nav ul { 
+	list-style-type: none;		/* No markers shown */
+	padding: 10px; 
+}
+main {
+	margin-left: 155px;
+	/*  margin-left: 0; */  /*  butts against nav */
+	background-color: #FFFFFF;
+	color: #000000;
+	padding: 1em; 
+} 
+header {
+	background-color: #401801;
+	color: #FFFFFF;
+	background-image: url('a_nine_truer.png');
+	background-repeat: no-repeat;
+	background-position: right;
+	line-height: 400%;
+	text-indent: 1em;
+}
+
+h1  {
+	margin-top: 0;
+	margin-bottom: 0;   /* This butts up on the main??  */
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 2.25em; /* It was 3em, which is more dramatic. */
+	vertical-align: middle;
+	letter-spacing: .25em;  
+}
+
+h2	{
+	color:  #FF6700;
+	font-family: Georgia, "Times New Roman", serif;
+	margin-bottom: 1em;
+}
+
+h3	{
+	color:  #FF6700;
+	font-family: Georgia, "Times New Roman", serif;
+}
+table {
+	border: 2px solid #fc0; 
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 300px;
+}
+
+th  {
+	text-align: left;
+	border-bottom: 1px solid#f00;
+	padding: 2px;
+	margin-left: 0px;
+	margin-right: 0px;
+	vertical-align: text-top;
+}
+
+td  {
+	/* The  td affects products.html and order.html */
+	text-align: left;
+	border-: 1px solid #fc0; */
+	padding: 2px;
+	margin-left: 0px;
+	margin-right: 0px;
+	vertical-align: text-top;
+}
+
+.uno {
+		width: 20px;
+		border: 1px solid #f00;
+}
+.dos {
+	width: 60px;
+	border: 1px solid #f00;
+}
+
+.tres {
+	width: 40px;
+	border: 1px solid #f00;
+}
+
+.cuatro {
+	width: 30px;
+	border: 1px solid #f00;
+}
+.piece {
+        /* This piece class controls the flavors display in index.html */
+         width: 144px;
+         margin: 4px;
+         padding:3px;
+         /* background-color: #FFAAAA; */
+         /* border: 1px solid #F90; */
+}
+
+.piece_faq {
+		/* This piece_faq class controls the occasions display in faq.html */
+		width: 180px;
+		/* background-color: #FFAAAA; */
+		/* border: 1px solid #F90; */
+		margin: 4px;
+		padding:3px;
+}
+
+.piece_product {
+			/* This piece_product class affects product.html */
+	/* background-color: #FFAAAA; */
+	/*border: 1px solid #F90; */
+	margin: 4px;
+}
+
+.small_product {
+	/* This piece_product class affects product.html */
+/* background-color: #FFAAAA; */
+/*border: 1px solid #F90; */
+margin: 4px;
+}
+
+.info  {
+		/* This info class controls affects product.html */
+	float: right;
+		font-family: "Times New Roman", Times, serif;
+	font-size: 14pt;
+	color: #401801;
+	background-color: #FFDCAA;
+	border: 3px solid #f00;
+	padding: 10px;
+	width: 400px;
+	border-radius: 15px;
+}
+
+
+input[list="list"] {
+	/* width: 180px; */ /* close to default? */
+	width: 150px;
+	padding: 1px;
+}
+
+input[type="text"] {
+	/* width: 180px; */ /* close to default? */
+	width: 150px;
+	padding: 1px;
+}
+
+input[type="button"] {
+	margin-left: 180px;
+}
+
+textarea {
+	display: block;
+	margin-top: 20px;
+}
+
+
+/*
+input[type="radio"] {
+	/*margin-top: 10px;  
+	margin-bottom: 3px;
+}
+*/
+/*
+input[type="text"] {
+	margin-bottom: 3px;
+}
+*/
+
+form {
+	/* background-color: #EAEAEA; */
+	background-color: #FFDCAA;
+	font-family: Arial, sans-serif;
+	/* width: auto; */
+	width: 400px;
+	padding: 10px;
+	border: 3px solid #f00;
+	border-radius: 15px;  
+}
+
+label {
+	float: left;
+	text-align: right;
+	width: 180px;
+	padding-right: 10px;
+	/* margin-top: 10px; */
+	/* shifted labels back */
+	/*	margin-top: 10px;    */
+	/* really messed up 2nd text box */
+	/* margin-top: 10px; */
+	/* really messed up the alignment of the form elements */
+	/*
+	clear: left;
+	display: block;  
+	margin-bottom: 3px; */
+}
+
+
+
+/* This puts graphic on the right side of right column. */
+#floatright { 
+	margin: 10px;
+	float: right;
+}
+footer {
+	font-size:70%;
+	text-align: center;
+	clear: right;		
+	padding-top:10px;
+	padding-bottom:20px;
+	background-color: #FF6700;
+}
+/* Forces display of elements within older browsers */
+header, nav, main, footer { display: block; } 

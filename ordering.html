@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Mona Lisa Handmade Chocolates</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="monalisa_new.css">
+
+	<!-- https://www.javatpoint.com/javascript-form-validation -->
+
+	<script>  /* type="text/javascript"> */
+
+        function fnFlavorToText(dlistflavor) {
+				document.getElementById("txtflav").value = dlistflavor;
+		}
+
+        function fnCoatingToText(radcoating) {
+				document.getElementById("txtchoc").value = radcoating;
+			}
+
+		function fnQtyToText(selqty) {
+			document.getElementById("txtqty").value = selqty;
+		}
+
+        function fnAddToOrder() {
+				event.preventDefault();
+				var str1 = document.getElementById("txtflav").value;
+				var MySpace = " ";
+				var MyCR = "\n";
+				var Mycomma = ", ";
+				var str2 = document.getElementById("txtchoc").value;
+				var str3 = document.getElementById("txtqty").value;
+				var str10 = str1 + Mycomma + str2 + Mycomma + str3 + MyCR;
+				OrderItems.value = OrderItems.value + MyCR + str10;
+			}
+
+
+		/* DOM manipulations & getElemenById method */
+        /*
+		function fn1() {
+			event.preventDefault();
+			var str1 = document.getElementById("text1").value;
+			var MySpace = " ";
+			var MyCR = "\n";
+			var str2 = document.getElementById("text2").value;
+			var str3 = document.getElementById("text3").value;
+
+			var str10 = '<label for "' + str2 + '">' + str1 + "</label>" + MyCR;
+			var str11 = '<input="text"' + ' name="' + str2 + '"' + ' id="' + str2 + '"';
+			str12 = " size=" + str3 + ">";
+
+			MyCollector.value = MyCollector.value + MyCR + str10 + MyCR + str11 + str12 + MyCR;
+		}
+        */
+	// buttonClick();
+
+	</script>
+</head>
+
+<body>
+	<!-- <div id="wrapper"> -->
+
+<header>
+	<h1>Mona Lisa Chocolates</h1>
+</header>
+
+<nav>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="faq.html">FAQ</a></li>
+		<li><a href="products.html">Products</a></li>
+		<li><a href="ordering.html">Ordering</a></li>
+	</ul>
+</nav>
+
+<main>
+	<h2>Ordering: Choose nougat flavor, chocolate coating and quantity.	</h2> 
+
+	<!--
+		<img src="a_decor.PNG" 
+			width="333" 
+			height="329" 
+			id="floatright" 
+			alt="Chocolates in a diagonal row."
+			title="Chocolates in a diagonal row.">
+	-->
+
+		<!--
+		<img src="a_decor.PNG"  
+			width="165" 
+			height="165" 
+			id="floatright" 
+			alt="Chocolates in a diagonal row." 
+			title="Chocolates in a diagonal row." >
+		-->
+	<div ID="boxer">
+
+		<div class="piece_product">
+	<form method="post" action="https://webdevbasics.net/scripts/demo.php">
+		<label for="myflavor">Flavor of Nougat:</label>
+		<input list="myflavors" name="myflavor" id="myflavor" onchange="fnFlavorToText(this.value)" style="width: 150px;" tabindex="5">
+
+		<datalist id="myflavors">
+			<option value="1.Maple">
+			<option value="2.Vanilla">
+			<option value="3.Anise">
+			<option value="4.Banana">
+			<option value="5.Peppermint Twist">
+			<option value="6.Spearmint">
+			<option value="7.Orange">
+			<option value="8.Lemon">
+			<option value="9.Strawberry">
+			<option value="10.Cranberry Jalapeno">
+			<option value="11.Butter Scotch">
+			<option value="12.Blueberry">
+			<option value="13.Cherry">
+			<option value="14.Berry Mix">
+			<option value="15.Peach">
+			<option value="16.Mango">
+			<option value="17.Green Apple">
+			<option value="18.Pineapple">
+			<option value="19.Pumpkin N Spice">
+			<option value="20.Almond">
+			<option value="21.Coconut">
+		</datalist>
+		<br><br>
+
+		<label>Nougat Coating:</label><br><br>
+		<label for="milk">Milk Chocolate </label>
+		<input type="radio" name="radcoating" id="milk" onclick="fnCoatingToText(this.value)" value="Milk Chocolate"
+			tabindex="6"><br>
+
+		<label for="dark">or Semi-sweet Dark</label>
+		<input type="radio" name="radcoating" id="dark" onclick="fnCoatingToText(this.value)" value="Semi-sweet Dark"
+			tabindex="7"><br><br>
+
+<!-- 
+look up media queries in textbook too 
+https://www.w3schools.com/css/css3_mediaqueries.asp
+
+https://www.w3schools.com/tags/att_input_type_radio.asp
+https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_radio
+ -->
+		<label for="selqty">Choose a Quantity:</label>
+		<select name="selqty" id="selqty" onchange="fnQtyToText(this.value)" tabindex="8">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+		</select>
+
+		<br><br>
+		<label for="txtflav">Your chosen flavor is:</label> <input type="text" name="txtflav" id="txtflav"
+			tabindex="9">
+		<br><br>
+		<label for="txtchoc">Your chosen coating is:</label> <input type="text" name="txtchoc" id="txtchoc"
+			tabindex="10">
+		<br><br>
+		<label for="txtqty">Your chosen quantity is:</label> <input type="text" name="txtqty" id="txtqty"
+			tabindex="11">
+		<br><br>
+		<input type="button" value="Add to Order List" onclick="fnAddToOrder()" tabindex="12">
+
+		<br>
+		<textarea name="OrderItems" id="OrderItems" rows=6 cols=42 placeholder="Order Items:"
+				tabindex="13"></textarea>
+		<br>
+		<input type="submit" value="Send Order" tabindex="14"> 
+		<input type="reset" value="Reset" tabindex="15"> 
+
+	</form>
+
+	</div>   <!-- piece_product-->
+	<!--  <div ID="boxer">  -->
+
+		<div class="piece_product">
+			<table class="mesa">
+			<tr>
+				<th>SKU</th>
+				<th>Nougat<br>Flavor</th>
+				<th>Cake<br>Sprinkles</th>
+				<th>Price /<br>each</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Maple</td>
+				<td>
+        			<img src="z_h_tan_bar.PNG" 
+                        width="27" 
+                        height="13" 
+                        alt="tan bar" 
+                        title="Maple flavor has tan, oblong cake sprinkles.">
+				</td>
+				<td>0.50</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Vanilla</td>
+				<td>
+					<img src="z_h_tan_bar.PNG" 
+                        width="27" 
+                        height="13" 
+                        alt="tan bar" 
+                        title="Vanilla flavor has tan, oblong-shaped, with white oblong-shaped cake sprinkles.">
+
+					<img src="z_h_white_bar.PNG" 
+                        width="27" 
+                        height="13" 
+                        alt="white bar" 
+                        title="Vanilla flavor has tan, oblong-shaped, with white oblong-shaped cake sprinkles.">
+				</td>
+				<td>0.50</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Anise</td>
+				<td>
+					<img src="z_r_tan_round.PNG" 
+                        width="17" 
+                        height="17" 
+                        alt="tan round" 
+                        title="Anise flavor has tan, round cake sprinkles.">
+				</td>
+				<td>0.50</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Banana</td>
+				<td>
+					<img src="z_h_yellow_bar.PNG" 
+                        width="27" 
+                        height="13" 
+                        alt="yellow bar" 
+                        title="Banana flavor has yellow, oblong-shaped cake sprinkles.">
+				</td>
+				<td>0.50</td>
+			</tr>
+			<tr>
+				<td>5</td>
+                <td>Peppermint<br>Twist</td>
+				<td>
+					<img src="z_h_candycane_bar.PNG" 
+                        width="27" 
+                        height="13" 
+                        alt="candy cane" 
+                        title="Peppermint flavor has candy cane striped, oblong-shaped cake sprinkles.">
+				</td>
+				<td>0.50</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>Spearmint</td>
+				<td>
+					<img src="z_h_green_bar.PNG" 
+                        width="27" 
+                        height="13" 
+                        alt="green bar" 
+                        title="Spearmint flavor has green, oblong-shaped cake sprinkles.">
+				</td>
+				<td>0.50</td>
+        	</tr>
+			<tr>
+				<td>7</td>
+				<td>Orange</td>
+				<td>
+					<img src="z_r_orange_round.PNG" 
+                    width="17" 
+                    height="17" 
+                    alt="orange round" 
+                    title="Orange flavor has orange, round cake sprinkles.">
+				</td>
+				<td>0.50</td>
+			</tr>
+			</table>
+		</div> <!-- piece_product -->
+
+
+		<div class="piece_product">
+			<table class="mesa">
+			<tr>
+				<th>SKU</th>
+				<th>Nougat<br>Flavor</th>
+				<th>Cake<br>Sprinkles</th>
+				<th>Price /<br>each</th>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>Lemon</td>
+				<td>
+					<img src="z_r_yellow_round.PNG" 
+                    width="17" 
+                    height="17" 
+                    alt="yellow round" 
+                    title="Lemon flavor has yellow, round cake sprinkles.">
+				</td>
+				<td>0.50</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>Strawberry</td>
+				<td>
+					<img src="z_r_pink_round.PNG" 
+                    width="17" 
+                    height="17" 
+                    alt="pink round" 
+                    title="Strawberry flavor has pink, round cake sprinkles.">
+				</td>
+				<td>0.50</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>Cranberry<br>Jalapeno</td>
+				<td>
+					<img src="z_h_red_bar.PNG" 
+                        width="27" 
+                        height="13" 
+                        alt="red bar" 
+                        title="Cranberry Jalapeno flavor has red, oblong-shaped cake sprinkle.">
+				</td>
+				<td>0.50</td>
+			</tr>
+			<tr>
+				<td>11</td>
+				<td>Butter Scotch</td>
+				<td>
+					<img src="z_h_orange_bar.PNG" 
+                        width="27" 
+                        height="13" 
+                        alt="orange bar" 
+                        title="Butter Scotch flavor has orange, oblong-shaped cake sprinkle.">
+				</td>
+				<td>0.50</td>
+			</tr>
+			<tr>
+				<td>12</td>
+				<td>Blueberry</td>
+				<td>
+					<img src="z_r_blue_round_s.PNG" 
+                    width="17" 
+                    height="17" 
+                    alt="blue round" 
+                    title="Blueberry flavor has blue, round cake sprinkles.">
+				</td>
+				<td>0.50</td>
+			</tr>
+			<tr>
+				<td>13</td>
+				<td>Cherry</td>
+				<td>
+					<img src="z_r_red_round.PNG" 
+                        width="17" 
+                        height="17" 
+                        alt="red round" 
+                        title="Cherry flavor has red, round cake sprinkles.">
+				</td>
+				<td>0.50</td>
+			</tr>
+			<tr>
+				<td>14</td>
+				<td>Berry Mix</td>
+				<td>
+					<img src="z_r_purple_round.PNG" 
+                        width="17" 
+                        height="17" 
+                        alt="purple round" 
+                        title="Berry Mix flavor has purple, round cake sprinkles.">
+				</td>
+				<td>0.50</td>
+			</tr>
+			</table>
+		</div> <!-- piece_product-->
+
+		<div class="piece_product">
+			<table class="mesa">
+			<tr>
+				<th>SKU</th>
+				<th>Nougat<br>Flavor</th>
+				<th>Cake<br>Sprinkles</th>
+				<th>Price /<br>each</th>
+			</tr>
+			<tr>
+				<td>15</td>
+				<td>Peach</td>
+				<td>
+					<img src="z_r_white_round.PNG" 
+                        width="17" 
+                        height="17" 
+                        alt="white round"
+						title="Peach flavor has white, round cake sprinkles.">
+				</td>
+				<td>0.50</td>
+			</tr>
+			<tr>
+				<td>16</td>
+				<td>Mango</td>
+				<td>
+					<img src="z_h_white_bar.PNG" 
+                        width="27" 
+                        height="13" 
+                        alt="white bar"
+						title="Mango flavor has white, oblong-shaped cake sprinkles.">
+				</td>
+				<td>0.50</td>
+			</tr>
+			<tr>
+				<td>17</td>
+				<td>Green Apple</td>
+				<td>
+					<img src="z_r_green_round.PNG" 
+                        width="17" 
+                        height="17" 
+                        alt="green round."
+                        title="Green Apple flavor has green, round cake sprinkles.">
+				</td>
+				<td>0.50</td>
+			</tr>
+			<tr>
+				<td>18</td>
+				<td>Pineapple</td>
+				<td>
+					<img src="z_h_yellow_bar.PNG" 
+                        width="27" 
+                        height="13" 
+                        alt="yellow bar"
+						title="Pineapple flavor has yellow, oblong-shaped cake sprinkles with green round calke sprinkles.">
+
+					<img src="z_r_green_round.PNG" 
+                        width="17" 
+                        height="17" 
+                        alt="green round"
+						title="Pineapple flavor has yellow, oblong-shaped cake sprinkles with green round calke sprinkles.">
+				</td>
+				<td>0.50</td>
+			</tr>
+			<tr>
+				<td>19</td>
+				<td>Pumpkin <br>N Spice</td>
+				<td>
+					<img src="z_h_orange_bar.PNG" 
+                        width="27" 
+                        height="13"
+                        alt="orange bar"
+						title="Pumpkin N Spice flavor has orange, oblong-shaped cake sprinkles, with tan, oblong-shaped cake sprinkles.">
+
+					<img src="z_h_tan_bar.PNG" 
+                        width="27" 
+                        height="13" 
+                        alt="tan bar"
+						title="Pumpkin N Spice flavor has orange, oblong-shaped cake sprinkles, with tan, oblong-shaped cake sprinkles.">
+				</td>
+				<td>0.50</td>
+			</tr>
+			<tr>
+				<td>20</td>
+				<td>Almond</td>
+				<td>
+					<img src="z_h_tan_bar.PNG" 
+                        width="27" 
+                        height="13" 
+                        alt="tan bar"
+						title="Almond flavor has tan, oblong-shaped cake sprinkles, with pink oblong-shaped cake sprinkles.">
+
+					<img src="z_h_pink_bar.PNG" 
+                    width="27" 
+                    height="13" 
+                    alt="pink bar"						
+                    title="Almond flavor has tan, oblong-shaped cake sprinkles, with pink oblong-shaped cake sprinkles.">
+				</td>
+				<td>0.50</td>
+			</tr>
+			<tr>
+				<td>21</td>
+				<td>Coconut</td>
+				<td>
+					<img src="z_r_white_round.PNG" 
+                        width="17" 
+                        height="17" 
+                        alt="white round"
+						title="Coconut flavor has white, round cake sprinkles and green, oblong cake sprinkles, along with tan, oblong cake sprinkles.">
+
+					<img src="z_h_green_bar.PNG" 
+                        width="27" 
+                        height="13" 
+                        alt="green bar"
+						title="Coconut flavor has white, round cake sprinkles and green, oblong cake sprinkles, along with tan, oblong cake sprinkles.">
+
+                    <img src="z_h_tan_bar.PNG" 
+                        width="27" 
+                        height="13" 
+                        alt="tan bar"
+						title="Coconut flavor has white, round cake sprinkles and green, oblong cake sprinkles, along with tan, oblong cake sprinkles.">
+				</td>
+				<td>0.50</td>
+			</tr>
+			</table>
+		</div> <!-- piece_product"  -->
+
+	</div> <!-- boxer -->
+
+		<h3>To Contact Us:</h3>
+		<address>
+			<span style="margin:25px">P.O. Box 888</span><br>
+			<span style="margin:25px">285 North Main Street</span><br>
+			<span style="margin:25px">Kaysville, UT 84037</span><br>
+		</address>
+		<span style="margin:25px">801-444-1517</span>
+	</main>
+
+	<footer>
+		Copyright &copy; 2023 Ask_Matt Software<br>
+		<a href="mailto:Matthew.Timothy@davistech.edu">
+			Matthew@Timothy.com</a>
+	</footer>
+
+
+	<!--  </div>  wrapper -->
+</body>
+
+</html>
